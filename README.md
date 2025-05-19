@@ -38,7 +38,7 @@ python async_crawler.py
 
 ## Results
 
-![alt text](/thread-vs-async-crawler/results/benchmark_plot.png)
+![alt text](/results/benchmark_plot.png)
 
 ## Conclusion
 
