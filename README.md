@@ -7,7 +7,6 @@ This project compares the performance and implementation of web crawlers using t
 - **Threaded Crawler:** Uses Python's `threading` module.
 - **Async Crawler:** Uses `asyncio` and `aiohttp`.
 - Performance benchmarking and comparison.
-- Simple, extensible codebase.
 
 ## Requirements
 
