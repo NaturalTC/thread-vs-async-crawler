@@ -2,14 +2,14 @@ import os
 import time
 import json
 import asyncio
+import requests
+import aiohttp
+import matplotlib.pyplot as plt
+
+from bs4 import BeautifulSoup
 from collections import deque
 from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
-
-import requests
-import aiohttp
-from bs4 import BeautifulSoup
-
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
@@ -170,7 +170,6 @@ def main():
         json.dump(results, f, indent=2)
 
     # plot
-    import matplotlib.pyplot as plt
     plt.figure(figsize=(8,5))
     plt.boxplot(
         [results["single_thread"],
