@@ -165,9 +165,14 @@ def main():
         "asyncio":       time_fn(lambda: asyncio.run(ac.crawl(workers)), repeats),
     }
 
-    # save raw JSON
+    # save raw JSON with descriptive labels
+    labeled_results = {}
+    for key, times in results.items():
+        labeled_results[key] = [
+            {"run": i + 1, "seconds": t} for i, t in enumerate(times)
+        ]
     with open(f"{RESULTS_DIR}/raw_results.json", "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(labeled_results, f, indent=2)
 
     # plot
     plt.figure(figsize=(8,5))
