@@ -13,7 +13,11 @@ This project compares the performance and implementation of web crawlers using t
 - Python 3.8+
 - `aiohttp`
 - `requests`
-
+- `beautifulsoup4`
+- `python-dotenv`
+- `pymongo`
+- `matplotlib`
+  
 Install dependencies:
 
 ```bash
