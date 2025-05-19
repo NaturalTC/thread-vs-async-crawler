@@ -1,0 +1,13 @@
+# HTTP + parsing
+requests>=2.25.1
+beautifulsoup4>=4.9.3
+
+# async HTTP
+aiohttp>=3.8.1
+
+# MongoDB + env
+pymongo>=3.11.3
+python-dotenv>=0.19.2
+
+# plotting
+matplotlib>=3.4.2
