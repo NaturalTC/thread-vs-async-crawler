@@ -1,19 +1,22 @@
-# Thread vs Async Crawler
+# Thread vs Async Crawler Benchmark
 
-This project compares the performance and implementation of web crawlers using threading and asynchronous programming in Python.
+This project compares three Python web crawling approaches on the same workload:
+- **Single-threaded** (sequential requests)
+- **ThreadPoolExecutor** (thread-based concurrency)
+- **asyncio + aiohttp** (event-driven concurrency)
 
-## Features
-
-- **Threaded Crawler:** Uses Python's `threading` module.
-- **Async Crawler:** Uses `asyncio` and `aiohttp`.
-- Performance benchmarking and comparison.
+And stores the webscraped data from www.wikipedia.org into a MongoDB.
 
 ## Requirements
 
 - Python 3.8+
 - `aiohttp`
 - `requests`
-
+- `beautifulsoup4`
+- `python-dotenv`
+- `pymongo`
+- `matplotlib`
+  
 Install dependencies:
 
 ```bash
@@ -22,17 +25,10 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the threaded crawler:
+**Run the benchmark script:**
 
 ```bash
-python threaded_crawler.py
-```
-
-Run the async crawler:
-
-```bash
-python async_crawler.py
-
+python benchmark.py
 ```
 
 ## Results
@@ -41,7 +37,7 @@ python async_crawler.py
 
 ## Conclusion
 
-Our findings show that the async crawler generally outperforms the threaded crawler in terms of speed and resource efficiency, especially when handling a large number of I/O-bound tasks. Threading can be simpler for small-scale tasks, but asynchronous programming provides better scalability for high-concurrency workloads.
+Our findings show that the async crawler generally outperforms the threaded crawler in terms of speed and resource efficiency, especially when handling a large number of I/O-bound tasks. Threading can be simpler for small-scale tasks, but asynchronous programming provides better scalability for high-concurrency workloads. While storing data wescraped into a MongoDB.
 
 ## License
 
