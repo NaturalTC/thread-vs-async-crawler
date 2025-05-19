@@ -1,12 +1,9 @@
-# Thread vs Async Crawler
+# Thread vs Async Crawler Benchmark
 
-This project compares the performance and implementation of web crawlers using threading and asynchronous programming in Python.
-
-## Features
-
-- **Threaded Crawler:** Uses Python's `threading` module.
-- **Async Crawler:** Uses `asyncio` and `aiohttp`.
-- Performance benchmarking and comparison.
+This project compares three Python web crawling approaches on the same workload:
+- **Single-threaded** (sequential requests)
+- **ThreadPoolExecutor** (thread-based concurrency)
+- **asyncio + aiohttp** (event-driven concurrency)
 
 ## Requirements
 
@@ -26,17 +23,10 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the threaded crawler:
+**Run the benchmark script:**
 
 ```bash
-python threaded_crawler.py
-```
-
-Run the async crawler:
-
-```bash
-python async_crawler.py
-
+python benchmark.py
 ```
 
 ## Results
